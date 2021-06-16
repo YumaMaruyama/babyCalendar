@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+.calendarTh {
+	background-color: #e6e5e5;
+	width: 100px;
+	height: 43px;
+	padding-top: 11px;
+}
+
+.calendarThSunday {
+	background-color: red;
+	width: 100px;
+}
+
+.calendarThSaturday {
+	background-color: #81c4ff;
+	width: 100px;
+}
+
+.calendarHomeTitle {
+	font-size: 30px;
+	padding: 24px 24px 21px 254px !important;
+	padding-button: 22px !important;
+	font-family: fantasy;
+}
+
+.titleText {
+	font-size: 37px;
+	padding-left: 51px;
+	font-family: monospace;
+	color: crimson;
+}
+
+.titleTextDesign {
+	position: relative;
+	color: #158b2b;
+	font-size: 35px;
+	padding: 10px 0;
+	text-align: center;
+	margin: 1.5em 0;
+}
+
+.titleTextDesign:before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 14%;
+	width: 160px;
+	height: 81px;
+	border-radius: 90%;
+	border: 5px solid #a6ddb0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.calendarHomeDay {
+	padding: 10px 46px 0px 0px !important;
+	text-align-last: end;
+}
+
+.clalendarHomeDayColor {
+	background-color: red;
+}
+
+.bodyPadding {
+	padding: 0px !important;
+}
+
+.backColor {
+	background-color: #e8fbff;
+}
+
+.center {
+	position: relative;
+	width: 300px;
+	height: 80px;
+}
+
+.calendar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.guideBtn {
+	margin: 0px 151px 0px -351px !important;
+	text-decoration: none !important;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+/* 背景用*/
+body {
+	padding: 30px;
+}
+
+.previous_month {
+	margin-left: 35px !important;
+}
+
+.current_month {
+	margin: 0px 35px;
+}
+
+.btn, a.btn, button.btn {
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.5;
+	position: relative;
+	display: inline-block;
+	padding: 1rem 4rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	color: #212529;
+	border-radius: 0.5rem;
+}
+
+.btn-border-shadow {
+	padding: calc(1.5rem - 12px) 3rem 1.5rem;
+	background: #fff;
+}
+
+.btn-border-shadow:before {
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	width: 100%;
+	height: 100%;
+	content: "";
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	border: 3px solid #000;
+	border-radius: 0.5rem;
+}
+
+.btn-border-shadow:hover {
+	padding: calc(1.5rem - 6px) 3rem;
+}
+
+.btn-border-shadow:hover:before {
+	top: 0;
+	left: 0;
+}
+
+.btn-border-shadow--color {
+	border-radius: 0;
+	background: yellow;
+}
+
+.btn-border-shadow--color:before {
+	border-radius: 0;
+}
+
+.btn-border-shadow--color2 {
+	border-radius: 0;
+	background: yellow;
+}
+
+.btn-border-shadow--color2:before {
+	border-radius: 0;
+}
+
+.btn-border-shadow--color3 {
+	border-radius: 0;
+	background: yellow;
+}
+
+.btn-border-shadow--color3:before {
+	border-radius: 0;
+}
+
+/* 休日追加ボタン*/
+button.btn-borderLeft {
+	border: 2px solid #000;
+	border-radius: 0;
+	background: #e1daf9;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+button.btn-borderLeft:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	-webkit-transform: translateX(0) translateY(0);
+	transform: translateX(0) translateY(0);
+	border-radius: 0 50% 50% 0;
+	background: #000;
+}
+
+button.btn-borderLeft:hover:before {
+	font-family: 'FontAwesome';
+	font-weight: bold;
+	line-height: 30px;
+	width: 43px;
+	height: 30px;
+	content: '\f0a4';
+	-webkit-transform: translateX(460%) translateY(.5rem);
+	transform: translateX(460%) translateY(.5rem);
+	color: #fff;
+	border-radius: 50%;
+}
+
+button.btn-borderRight {
+	border: 2px solid #000;
+	border-radius: 0;
+	background: #ffe4bf;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+button.btn-borderRight:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	-webkit-transform: translateX(0) translateY(0);
+	transform: translateX(0) translateY(0);
+	border-radius: 0 50% 50% 0;
+	background: #000;
+}
+
+button.btn-borderRight:hover:before {
+	font-family: 'FontAwesome';
+	font-weight: bold;
+	line-height: 30px;
+	width: 43px;
+	height: 30px;
+	content: '\f0c4';
+	-webkit-transform: translateX(460%) translateY(.5rem);
+	transform: translateX(460%) translateY(.5rem);
+	color: #fff;
+	border-radius: 50%;
+}
+
+.btn-social-isometric {
+	color: #484848;
+	display: inline-block;
+	height: 50px;
+	font-size: 25px;
+	line-height: 46px;
+	background: #eaeef1;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 1em;
+}
+
+.btn-social-isometric-icon {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	color: white;
+}
+
+.btn-social-isometric-icon i {
+	line-height: 46px;
+	font-size: 25px;
+}
+
+.btn-social-isometric-text {
+	display: inline-block;
+	width: 120px;
+	height: 50px;
+	text-align: center;
+	border-bottom: solid 4px #dcdcdc;
+}
+
+.btn-social-isometric-icon--feedly {
+	background: #7ece46;
+	border-bottom: solid 4px #65b130;
+}
+
+.btn-social-isometric:hover {
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+}
+
+.btn-social-isometric:hover .btn-social-isometric-text,
+	.btn-social-isometric:hover .btn-social-isometric-icon {
+	border-bottom: none;
+}

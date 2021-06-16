@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	style="text-align: -webkit-center;">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap  jQuery Bootstrapの読み込み必要がある-->
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	rel="stylesheet"></link>
+<!--　jQueryのjsファイル タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+<!--　Bootstrap のjsファイル（jQueryの後に読み込む） タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/css/calendarHolidayAddition.css}" rel="stylesheet"></link>
+
+<title>calendarHolidayAddtion</title>
+</head>
+<body class="imgSize" background="/css/calendarImgAdd.jpg">
+
+	<h1 class="h1" th:text="${year} + '年' + ${month + 1} + '月内の休日追加'"></h1>
+
+	<form method="post" th:action="@{/calendarHoliday}"
+		th:object="${calendarHolidayAdditionForm}">
+
+		<label th:text="${result}"></label>
+		<table class="table table-bordared table-hover" style="width: 800px;">
+			<tbody class="tbodyPadding">
+				<tr class="Padding">
+					<th class="font" style="padding: 20px; padding-top: 27px;">休日を設定する日付は何日ですか？</th>
+					<td style="padding: 20px; padding-top: 27px;"><select
+						id="optionDaysField" class="form-control" th:field="*{days}">
+							<option th:each="oneDay,start:${maxDayList}"
+								th:value="${start.count}" th:text="${start.count}"></option>
+
+					</select></td>
+				</tr>
+
+				<tr>
+					<td class="padding"><input type="hidden" th:value="${month}"
+						th:field="*{month}"> <input type="hidden"
+						th:value="${year}" th:field="*{year}">
+						<button class="btn btn-gradient textMargin" type="submit"
+							name="addition">
+							<span class="btnFont">休日を追加する</span>
+						</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+</body>
+</html>

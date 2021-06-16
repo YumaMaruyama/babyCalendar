@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	style="text-align: -webkit-center;">
+<head>
+<meta charset="UTF-8">
+
+<!-- アイコン用 -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<!-- Bootstrap  jQuery Bootstrapの読み込み必要がある-->
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	rel="stylesheet"></link>
+<!--　jQueryのjsファイル タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+<!--　Bootstrap のjsファイル（jQueryの後に読み込む） タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/css/calendarHome.css}" rel="stylesheet"></link>
+<link th:href="@{/css/flex.css}" rel="stylesheet"></link>
+
+<title>calendarHomeTest</title>
+</head>
+<body background="/css/calendarImg.jpg" class="bodyPadding">
+
+	<form method="get" th:action="@{/calendarHoliday}"
+		th:object="${calendarHolidayForm}">
+		<table class="" style="width: 1300px;">
+			<tr>
+				<th><input type="hidden" th:value="${month}" name="month">
+					<input type="hidden" th:value="${year}" name="year">
+				<td class="col-sm-3 text-left titleText titleTextDesign">社内カレンダー</td>
+				<td class="calendarHomeTitle"
+					th:text="${year} + '年' + ${month + 1} + '月'"></td>
+
+				<td><button class="btn btn-borderLeft" name="addition">会社の休日追加設定</button></td>
+				<td><button class="btn btn-borderRight" name="deletion">会社の休日削除設定</button></td>
+				</th>
+
+			</tr>
+		</table>
+	</form>
+
+
+
+	<table class="table table-bordered table-hover"
+		style="width: 700px; height: 430px;">
+		<tr>
+			<th class="text-center calendarThSunday">日</th>
+			<th class="text-center calendarTh">月</th>
+			<th class="text-center calendarTh">火</th>
+			<th class="text-center calendarTh">水</th>
+			<th class="text-center calendarTh">木</th>
+			<th class="text-center calendarTh">金</th>
+			<th class="text-center calendarThSaturday">土</th>
+		</tr>
+
+		<tr th:each=" weeks : ${getDayList}">
+			<td class="backColor center"
+				th:classappend="${days != 0} ? 'calendarHomeDay' : ''"
+				th:each="days : ${weeks}"><div>
+					<i th:text="${days != 0}? ${days} : ' '"
+						th:if="${holidaysList.contains(days)}"
+						class="text-center fa fa-child calendar"></i>
+					<div th:if="${!holidaysList.contains(days)}"
+						th:text="${days != 0}? ${days} : ' '" class="text-center calendar"></div>
+				</div></td>
+		</tr>
+
+	</table>
+
+
+<div class="flexMonthBtn">
+	<form method="post" th:action="@{/calendarHome}"
+		th:object="${calendarForm}">
+		<input type="hidden" th:value="${month}" name="month"> <input
+			type="hidden" th:value="${year}" name="year"> <a
+			th:href="@{/calendarHomeGuide}" class="btn-social-isometric guideBtn"><span
+			class="btn-social-isometric-icon btn-social-isometric-icon--feedly">
+				<i class="fa fa-info-circle"></i>
+		</span> <span class="btn-social-isometric-text">ガイド</span> </a>
+		<button
+			class="btn btn-border-shadow btn-border-shadow--color previous_month"
+			style="background-color: #a6e2f9;" name="previous">前の月へ</button>
+		<a th:href="@{/calendarHome}"
+			class="btn btn-border-shadow btn-border-shadow--color3 current_month"
+			style="background-color: #e8ecac;">今月</a>
+		<button class="btn btn-border-shadow btn-border-shadow--color2"
+			style="background-color: #76ffad;" name="tip">次の月へ</button>
+	</form>
+	</div>
+</body>
+</html>

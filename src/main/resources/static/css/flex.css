@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*
+.flex td {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (min-width: 1200px){
+  .flex-1-2-3 td {
+    flex: 0 1 48%;
+  }
+}
+@media (min-width: 1300px){
+  .flex-1-2-3 td {
+    flex: 0 1 31.3333%;
+  }
+
+
+.flexTable {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.flexMonthBtn {
+	display:grid;
+	grid-template-columns:1fr;
+}
+
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -1% 30px;
+  padding: 0;
+}
+.flex td {
+  flex: 0 1 98%;
+  margin: 0 1% 30px;
+  padding: 0;
+  background: pink;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+.flex a {
+  text-decoration: none;
+  font-size: 1.6em;
+}
+@media (min-width: 600px){
+  .flex-1-2-3 td {
+    flex: 0 1 48%;
+  }
+}
+@media (min-width: 800px){
+  .flex-1-2-3 td {
+    flex: 0 1 31.3333%;
+  }
+}*/

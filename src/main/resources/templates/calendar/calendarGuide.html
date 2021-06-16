@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	style="text-align: -webkit-center;">
+<head>
+<meta charset="UTF-8">
+
+<!-- アイコン用 -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<!-- Bootstrap  jQuery Bootstrapの読み込み必要がある-->
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	rel="stylesheet"></link>
+<!--　jQueryのjsファイル タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+<!--　Bootstrap のjsファイル（jQueryの後に読み込む） タイムリーフでファイル読み込み　 -->
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<link th:href="@{/css/calendarGuide.css}" rel="stylesheet"></link>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+	<table>
+		<h2 class="text-center">社内カレンダー仕様ガイド</h2>
+	</table>
+	<table class="table table-bordered table-hover">
+		<tr>
+			<th>休日追加ボタン</th>
+			<td>ボタンを押した時点の年月の日付に休日マーク(赤ちゃんマーク)を追加することができます。</td>
+		</tr>
+	</table>
+</body>
+</html>
