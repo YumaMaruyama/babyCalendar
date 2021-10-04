@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<packaging>war</packaging>
+	
 
 
 
@@ -19,6 +19,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBoot_Todo-1</name>
 	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
