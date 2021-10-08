@@ -86,15 +86,14 @@
 			<artifactId>bootstrap</artifactId>
 			<version>3.3.7-1</version>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
+			
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>spring-boot-maven-plugin</artifactId>		
 				<configuration>
 					<excludes>
 						<exclude>
@@ -102,7 +101,9 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<executable>true</executable><!-- デーモン化 -->
 				</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
