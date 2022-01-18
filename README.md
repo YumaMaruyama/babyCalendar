@@ -1,4 +1,6 @@
 # babyCalendar
+![iOS の画像 (8)](https://user-images.githubusercontent.com/83486993/149938309-b8230b9a-c1fc-4790-bee5-fa19d4d736e4.png)
+
 
 ## [アプリ概要]
 休日を確認できる社内カレンダーです。 
